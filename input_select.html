@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>下拉可输入的下拉选</title>
+		<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<div style='text-align: center;margin-top:10px;float:left;'>
+			<select id="select" style="width:150px;height:21px;" onchange="a()">
+				<option value="1">000000</option>
+				<option value="2">22222</option>
+			</select>
+			<input type="text" id="_input" style="width:130px;height:15px;margin-left:-157px;" />
+		</div>
+		<div style='float:left;'>
+			<input type="button" onclick="b()" style="margin-top:10px;margin-left:10px;" value="显示值" />
+		</div>
+		
+		<script>
+			function a(){
+				$("#_input").val($("#select option:selected").text());
+			}
+			function b(){
+				alert($("#_input").val());
+			}
+		</script>
+	</body>
+</html>
